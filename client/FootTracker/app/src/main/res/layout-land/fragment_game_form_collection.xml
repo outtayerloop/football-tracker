@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_form_collection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".controller.gameform.fragment.GameFormCollectionFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/game_form_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/white"
+        android:backgroundTint="@color/design_default_color_primary"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/tab_shadow"
+        app:tabIconTint="@color/tab_color_selector"
+        android:elevation="10dp"
+        app:tabGravity="fill"
+        app:tabInlineLabel="true"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/game_form_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_game_stats_overview">
+
+    <fragment
+        android:id="@+id/navigation_game_stats_overview"
+        android:name="fr.android.foottracker.controller.gamereview.fragment.GameStatsOverviewFragment"
+        android:label="@string/title_game_stats_overview"
+        tools:layout="@layout/fragment_game_stats_overview">
+
+        <action
+            android:id="@+id/action_to_overview"
+            app:destination="@+id/navigation_game_stats_overview"/>
+
+        <action
+            android:id="@+id/action_to_timeline"
+            app:destination="@+id/navigation_game_stats_timeline"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_game_stats_timeline"
+        android:name="fr.android.foottracker.controller.gamereview.fragment.GameStatsTimelineFragment"
+        android:label="@string/title_game_stats_timeline"
+        tools:layout="@layout/fragment_game_stats_timeline">
+
+        <action
+            android:id="@+id/action_to_overview"
+            app:destination="@+id/navigation_game_stats_overview"/>
+
+        <action
+            android:id="@+id/action_to_timeline"
+            app:destination="@+id/navigation_game_stats_timeline"/>
+
+    </fragment>
+
+</navigation>

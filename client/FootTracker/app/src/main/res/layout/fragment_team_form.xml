@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soccer_ground"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".controller.gameform.fragment.TeamFormFragment"
+    android:columnCount="1"
+    android:rowCount="14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/missing_team_error_message"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:minWidth="300dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:text="@string/missing_tracked_team_message"
+            android:background="@drawable/error_message_border"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1" />
+
+    <LinearLayout
+        android:id="@+id/striker_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="2"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:labelFor="@+id/striker"
+                android:background="@drawable/label_border"
+                android:textColor="@color/night_purple_blue"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/striker_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!--Avant-centre-->
+            <AutoCompleteTextView
+                android:tag="@string/team_form_player_slot_tag"
+                android:id="@+id/striker"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"
+                android:spinnerMode="dialog"
+                tools:listitem=""
+                android:autofillHints="name"
+                android:completionThreshold="1" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:columnCount="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/left_midfielder"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/left_midfielder_label" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="0.5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/right_midfielder"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/right_midfielder_label" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_right_midfielders_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1.25"
+            android:gravity="center_horizontal">
+
+            <!--Ailier gauche-->
+            <AutoCompleteTextView
+                android:tag="@string/team_form_player_slot_tag"
+                android:id="@+id/left_midfielder"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:autofillHints="name"
+                android:inputType="textNoSuggestions"
+                android:completionThreshold="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1.25"
+            android:gravity="center_horizontal">
+
+            <!--Ailier droit-->
+            <AutoCompleteTextView
+                android:tag="@string/team_form_player_slot_tag"
+                android:id="@+id/right_midfielder"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:autofillHints="name"
+                android:inputType="textNoSuggestions"
+                android:completionThreshold="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/attacking_central_midfielders_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="2"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:columnCount="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="end"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/attacking_midfielder"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/attacking_midfielder_label" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/central_midfielder"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/central_midfielder_label" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:columnCount="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="end"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp">
+
+                <!--Milieu gauche-->
+                <AutoCompleteTextView
+                    android:tag="@string/team_form_player_slot_tag"
+                    android:id="@+id/attacking_midfielder"
+                    android:layout_width="wrap_content"
+                    android:minWidth="150dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/input_border"
+                    android:gravity="center"
+                    android:autofillHints="name"
+                    android:inputType="textNoSuggestions"
+                    android:completionThreshold="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp">
+
+                <!--Milieu droit-->
+                <AutoCompleteTextView
+                    android:tag="@string/team_form_player_slot_tag"
+                    android:id="@+id/central_midfielder"
+                    android:layout_width="wrap_content"
+                    android:minWidth="150dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/input_border"
+                    android:gravity="center"
+                    android:autofillHints="name"
+                    android:inputType="textNoSuggestions"
+                    android:completionThreshold="1" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:labelFor="@+id/defending_midfielder"
+                android:background="@drawable/label_border"
+                android:textColor="@color/night_purple_blue"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/defending_midfielder_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/defending_midfielder_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--Milieu central-->
+        <AutoCompleteTextView
+            android:tag="@string/team_form_player_slot_tag"
+            android:id="@+id/defending_midfielder"
+            android:layout_width="wrap_content"
+            android:minWidth="150dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/input_border"
+            android:gravity="center"
+            android:autofillHints="name"
+            android:inputType="textNoSuggestions"
+            android:completionThreshold="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fullbacks_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="2"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:columnCount="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/left_fullback"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/left_fullback_label" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="0.5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/right_fullback"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/right_fullback_label" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:columnCount="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <!--Arrière gauche-->
+                <AutoCompleteTextView
+                    android:tag="@string/team_form_player_slot_tag"
+                    android:id="@+id/left_fullback"
+                    android:layout_width="wrap_content"
+                    android:minWidth="150dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/input_border"
+                    android:gravity="center"
+                    android:autofillHints="name"
+                    android:inputType="textNoSuggestions"
+                    android:completionThreshold="1" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="0.5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1.25"
+                android:gravity="center_horizontal">
+
+                <!--Arrière droit-->
+                <AutoCompleteTextView
+                    android:tag="@string/team_form_player_slot_tag"
+                    android:id="@+id/right_fullback"
+                    android:layout_width="wrap_content"
+                    android:minWidth="150dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/input_border"
+                    android:gravity="center"
+                    android:autofillHints="name"
+                    android:inputType="textNoSuggestions"
+                    android:completionThreshold="1" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:columnCount="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="end"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/left_center_back"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/left_center_back_label" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_columnWeight="1"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:labelFor="@+id/right_center_back"
+                    android:background="@drawable/label_border"
+                    android:textColor="@color/night_purple_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/right_center_back_label" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/center_backs_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_columnWeight="1"
+            android:gravity="end"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp">
+
+            <!--Defenseur central-->
+            <AutoCompleteTextView
+                android:tag="@string/team_form_player_slot_tag"
+                android:id="@+id/left_center_back"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:autofillHints="name"
+                android:inputType="textNoSuggestions"
+                android:completionThreshold="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_columnWeight="1"
+            android:gravity="start"
+            android:paddingEnd="0dp"
+            android:paddingStart="20dp">
+
+            <!--Defenseur central-->
+            <AutoCompleteTextView
+                android:tag="@string/team_form_player_slot_tag"
+                android:id="@+id/right_center_back"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"
+                android:gravity="center"
+                android:autofillHints="name"
+                android:inputType="textNoSuggestions"
+                android:completionThreshold="1" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/goalkeeper_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:labelFor="@+id/goalkeeper"
+                android:background="@drawable/label_border"
+                android:textColor="@color/night_purple_blue"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/goalkeeper_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--Gardien-->
+        <AutoCompleteTextView
+            android:tag="@string/team_form_player_slot_tag"
+            android:id="@+id/goalkeeper"
+            android:layout_width="wrap_content"
+            android:minWidth="150dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/input_border"
+            android:gravity="center"
+            android:autofillHints="name"
+            android:inputType="textNoSuggestions"
+            android:completionThreshold="1" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1" />
+
+</GridLayout>

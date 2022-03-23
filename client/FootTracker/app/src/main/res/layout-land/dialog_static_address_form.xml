@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:id="@+id/address_form"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp">
+
+        <TextView
+            android:id="@+id/address_form_header"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/design_default_color_primary"
+            android:textColor="@color/white"
+            android:text="@string/address_dialog_header" />
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_label"
+            android:labelFor="@id/address"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:drawableStart="@drawable/baseline_place_24"
+            android:drawableTint="@color/field_grey"
+            android:drawablePadding="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            tools:ignore="Autofill"
+            android:imeOptions="flagNoExtractUi"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

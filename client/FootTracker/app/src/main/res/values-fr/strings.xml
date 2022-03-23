@@ -1,0 +1,155 @@
+<resources>
+    <!--Nom de l'application dans la tool bar.-->
+    <string name="app_name">FootTracker</string>
+
+    <!--Valeurs de la page d'accueil-->
+    <string name="create_game">Nouveau match</string>
+    <string name="previous_games">Matchs terminés</string>
+
+    <!--Libelle des postes du fragment de gestion de l'equipe suivie-->
+    <string name="championship_label">Compétition</string>
+    <string name="tracked_team_label">Mon équipe</string>
+    <string name="opponent_team_label">Équipe adverse</string>
+    <string name="referee_label">Arbitre</string>
+    <string name="date_label">Date</string>
+    <string name="time_label">Heure</string>
+    <string name="game_form_tab_title">Match</string>
+    <string name="game_form_team_tab_title">Mon équipe</string>
+    <string name="game_form_map_tab_title">Lieu</string>
+    <string name="start_game_icon_title">Lancer</string>
+    <string name="championship_icon_description">Icône compétition</string>
+    <string name="striker_label">Avant-centre</string>
+    <string name="left_midfielder_label">Ailier gauche</string>
+    <string name="right_midfielder_label">Ailier droit</string>
+    <string name="attacking_midfielder_label">Milieu gauche</string>
+    <string name="central_midfielder_label">Milieu droit</string>
+    <string name="defending_midfielder_label">Milieu central</string>
+    <string name="left_fullback_label">Arrière gauche</string>
+    <string name="right_fullback_label">Arrière droit</string>
+    <string name="left_center_back_label">Défenseur central</string>
+    <string name="right_center_back_label">Défenseur central</string>
+    <string name="goalkeeper_label">Gardien</string>
+
+    <!--Tags utilises pour la recherche.-->
+    <string name="team_form_player_slot_tag">TEAM_FORM_EDIT_TAG</string>
+    <string name="game_form_autocompletion_slot_tag">GAME_FORM_AUTOCOMPLETE_TAG</string>
+    <string name="map_fab_tag">MAP_FLOATING_ACTION_BUTTON_TAG</string>
+    <string name="coordinate_edit_tag">COORDINATE_EDIT_TAG</string>
+
+    <!--Messages d'erreur pour validation de formulaire.-->
+    <string name="double_team_error">Le match doit opposer 2 équipes différentes.</string>
+    <string name="empty_slot_error">Ce champ est obligatoire.</string>
+    <string name="invalid_latitude">La latitude doit être comprise entre -90 et 90.</string>
+    <string name="invalid_longitude">La longitude doit être comprise entre -180 et 180.</string>
+
+    <!--Messages du fragment de localisation Google Maps.-->
+    <string name="location_permissions_rationale_text">Cette application utilise les coordonnées GPS de l\'appareil pour localiser le match en cours de création.</string>
+    <string name="location_permission_dialog_title">Nous avons besoin de votre permission.</string>
+    <string name="ok">OK</string>
+    <string name="marker_title">Lieu du match</string>
+    <string name="location_permission_snackbar_title">Pour visualiser la position actuelle, autorisez la localisation de l\'appareil.</string>
+    <string name="location_settings_snackbar_title">Pour continuer, l\'appareil doit être localisable.</string>
+    <string name="settings">Paramètres</string>
+    <string name="missing_location_snackbar">Cet appareil ne dispose pas d\'un système de localisation.</string>
+    <string name="unknown_address">Cette adresse n\'a pas pu être géolocalisée sur la carte. Essayez avec une adresse différente.</string>
+
+    <!--Dialogues du fragment de localisation-->
+    <string name="address_label">Adresse ou Lieu</string>
+    <string name="address_dialog_header">Lieu du match</string>
+    <string name="cancel">Annuler</string>
+    <string name="coordinates_dialog_header">Coordonnées GPS du match</string>
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+
+    <!--Message d'erreur de remplissage du formulaire des joueurs de l'equipe suivie-->
+    <string name="missing_tracked_team_message">Le nom de l\'équipe suivie doit d\'abord être précisé</string>
+
+    <!--Messages d'erreur de creation de match par click du bouton "Fini"-->
+    <string name="missing_game_form_fields_message">Veuillez compléter les informations du match</string>
+    <string name="missing_team_form_fields_message">Veuillez compléter les joueurs de l\'équipe suivie</string>
+    <string name="missing_map_form_fields_message">Veuillez indiquer un lieu pour le match</string>
+
+    <!--Consultation des matchs/statistiques des match-->
+    <string name="home_btn_description">Retour à l\'écran d\'accueil</string>
+    <string name="no_games_found">Aucun match pour le moment. Quand vous en ajouterez, ils apparaîtront ici.</string>
+    <string name="game_card_image_description">Image du panel du match</string>
+    <string name="stats_button_label">Statistiques</string>
+    <string name="game_load_button_label">Charger plus de matchs</string>
+    <string name="no_overtime_label">Pas de prolongations</string>
+    <string name="overtime_label">Prolongations</string>
+    <string name="tracked_team_descriminator">vous</string>
+
+    <!--Contenu des fragments de statistiques-->
+    <string name="game_stats_overview_title">Vue d\'ensemble</string>
+    <string name="game_stats_timeline_title">Chronologie</string>
+    <string name="possession_stats_row_title">STATISTIQUES DE POSSESSION</string>
+    <string name="playstyle_stats_row_title">STATISTIQUES DE JEU</string>
+    <string name="game_overview_stop_count">NOMBRE D\'ARRÊTS</string>
+    <string name="game_overview_occasion_count">NOMBRE D\'OCCASIONS</string>
+    <string name="game_overview_offside_count">NOMBRE DE HORS-JEUX</string>
+    <string name="game_overview_fault_count">NOMBRE DE FAUTES</string>
+    <string name="game_overview_penalty_count">NOMBRE DE PENALTY</string>
+    <string name="out_stats_row_title">STATISTIQUES DES SORTIES</string>
+    <string name="game_overview_classic_out_count">CLASSIQUE</string>
+    <string name="game_overview_freekick_count">COUP-FRANC</string>
+    <string name="game_overview_corner_count">CORNER</string>
+    <string name="card_stats_row_title">STATISTIQUES DES CARTONS</string>
+    <string name="game_overview_yellow_card_count">JAUNE</string>
+    <string name="game_overview_red_card_count">ROUGE</string>
+    <string name="goal_timeline_title">BUTS</string>
+    <string name="game_timeline_player">JOUEUR</string>
+    <string name="game_timeline_team">EQUIPE</string>
+    <string name="game_timeline_moment">INSTANT</string>
+    <string name="empty_goals_message">Votre equipe n\'a marque aucun but</string>
+    <string name="empty_cards_message">Votre equipe n\' reçu aucun carton</string>
+    <string name="card_timeline_title">CARTONS</string>
+
+
+    <string name="update" translatable="true">MISE A JOUR</string>
+    <string name="result" translatable="true">RESULTATS</string>
+
+    <string name="out" translatable="true">SORTIE</string>
+    <string name="offside" translatable="true">HORS-JEU</string>
+    <string name="faults" translatable="true">FAUTE</string>
+    <string name="possession" translatable="true">POSSESSION</string>
+    <string name="occasion" translatable="true">OCCASION</string>
+    <string name="stop" translatable="true">ARRET</string>
+    <string name="card" translatable="true">CARTON</string>
+    <string name="shot" translatable="true">TIR</string>
+    <string name="goal" translatable="true">BUT</string>
+    <string name="overtime" translatable="true">PROLONGATIONS</string>
+    <string name="red_card" translatable="true">ROUGE</string>
+    <string name="yellow_card" translatable="true">JAUNE</string>
+    <string name="penalty" translatable="true">PENALTY</string>
+    <string name="free_kick" translatable="true">COUP FRANC</string>
+    <string name="score" translatable="true">SCORE</string>
+    <string name="validate" translatable="true">VALIDER</string>
+
+    <!-- VALEUR PAR DEFAUT PARTIE RESULT -->
+    <string name="default_number" translatable="true">0</string>
+    <string name="default_overtime" translatable="true">00:00</string>
+    <string name="dialog_title" translatable="true">INFORMATIONS MANQUANTES</string>
+    <string name="dialog_message" translatable="true">Il manque des informations pour valider la mise à jour</string>
+    <string name="closeDialog" translatable="true">Compris</string>
+
+    <!--Mise à jour de match-->
+    <string name="No">Non</string>
+    <string name="yes">Oui</string>
+    <string name="takePhoto">Photo</string>
+    <string name="confirmOverTime">Voulez-vous lancer les prolongations ?</string>
+
+    <string-array name="cards_array" translatable="true">
+        <item />
+        <item>JAUNE</item>
+        <item>ROUGE</item>
+    </string-array>
+    <string-array name="shot_array" translatable="true">
+        <item />
+        <item>PENALTY</item>
+        <item>COUP FRANC</item>
+    </string-array>
+
+    <!--Locale (langue courante)-->
+    <string name="locale_toggle_title">Modifier la langue</string>
+
+</resources>

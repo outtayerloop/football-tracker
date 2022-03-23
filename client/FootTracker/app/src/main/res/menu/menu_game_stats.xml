@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_game_stats_overview"
+        android:icon="@drawable/baseline_dashboard_24"
+        android:iconTint="@color/bottom_nav_view_color_selector"
+        android:title="@string/game_stats_overview_title" />
+    <item
+        android:id="@+id/navigation_game_stats_timeline"
+        android:icon="@drawable/baseline_history_24"
+        android:iconTint="@color/bottom_nav_view_color_selector"
+        android:title="@string/game_stats_timeline_title" />
+</menu>

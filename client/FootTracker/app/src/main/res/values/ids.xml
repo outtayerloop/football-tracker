@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dynamic_location_fab" type="id" />
+    <item name="static_address_fab" type="id" />
+    <item name="static_coordinates_fab" type="id" />
+    <item name="overtime_value" type="id" />
+    <item name="button_10" type="id" />
+    <item name="score_value" type="id" />
+    <item name="goal_value" type="id" />
+    <item name="stop_value" type="id" />
+    <item name="occasion_value" type="id" />
+    <item name="possession_value" type="id" />
+    <item name="freeKick_value" type="id" />
+    <item name="penalty_value" type="id" />
+    <item name="yellowCard_value" type="id" />
+    <item name="redCard_value" type="id" />
+    <item name="fault_value" type="id" />
+    <item name="offside_value" type="id" />
+    <item name="corner_value" type="id" />
+    <item name="out_value" type="id" />
+    <item name="button_9" type="id" />
+    <item name="overtime_spinner" type="id" />
+    <item name="button_8" type="id" />
+    <item name="player_shot" type="id" />
+    <item name="shot_spinner" type="id" />
+    <item name="button_7" type="id" />
+    <item name="player_goal" type="id" />
+    <item name="button_6" type="id" />
+    <item name="player_card" type="id" />
+    <item name="card_spinner" type="id" />
+    <item name="button_5" type="id" />
+    <item name="button_4" type="id" />
+    <item name="button_3" type="id" />
+    <item name="button_2" type="id" />
+    <item name="button_1" type="id" />
+    <item name="button_0" type="id" />
+    <item name="missing_games_message" type="id" />
+    <item name="remote_game_load_progress" type="id" />
+</resources>

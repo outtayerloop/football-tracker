@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:id="@+id/game_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".controller.gameform.fragment.GameFormFragment"
+        android:padding="30dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/championship_label"
+                android:labelFor="@id/championship" />
+
+            <AutoCompleteTextView
+                android:id="@+id/championship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:completionThreshold="1"
+                android:drawableStart="@drawable/baseline_emoji_events_24"
+                android:drawableTint="@color/field_grey"
+                android:drawablePadding="15dp"
+                android:tag="@string/game_form_autocompletion_slot_tag"
+                android:imeOptions="flagNoExtractUi"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tracked_team_label"
+                android:labelFor="@id/tracked_team" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tracked_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:completionThreshold="1"
+                android:drawableStart="@drawable/baseline_groups_24"
+                android:drawableTint="@color/field_grey"
+                android:drawablePadding="15dp"
+                android:tag="@string/game_form_autocompletion_slot_tag"
+                android:imeOptions="flagNoExtractUi"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opponent_team_label"
+                android:labelFor="@id/opponent_team" />
+
+            <AutoCompleteTextView
+                android:id="@+id/opponent_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:completionThreshold="1"
+                android:drawableStart="@drawable/baseline_groups_24"
+                android:drawableTint="@color/field_grey"
+                android:drawablePadding="15dp"
+                android:tag="@string/game_form_autocompletion_slot_tag"
+                android:imeOptions="flagNoExtractUi"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/referee_label"
+                android:labelFor="@id/referee" />
+
+            <AutoCompleteTextView
+                android:id="@+id/referee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:completionThreshold="1"
+                android:drawableStart="@drawable/baseline_sports_24"
+                android:drawableTint="@color/field_grey"
+                android:drawablePadding="15dp"
+                android:tag="@string/game_form_autocompletion_slot_tag"
+                android:imeOptions="flagNoExtractUi"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_label"
+                    android:labelFor="@id/date_picker" />
+
+                <EditText
+                    android:id="@+id/date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:drawableStart="@drawable/baseline_today_24"
+                    android:drawableTint="@color/field_grey"
+                    android:drawablePadding="15dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_label"
+                    android:labelFor="@id/time_picker" />
+
+                <EditText
+                    android:id="@+id/time_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="time"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:drawableStart="@drawable/baseline_schedule_24"
+                    android:drawableTint="@color/field_grey"
+                    android:drawablePadding="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

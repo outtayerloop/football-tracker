@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/english_locale"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/locale_toggle"
+        android:title="@string/locale_toggle_title"
+        app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
+        app:showAsAction="always" />
+    <item
+        android:title="@string/french_locale"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/game_start_icon"
+        android:icon="@drawable/baseline_done_all_white_24"
+        app:showAsAction="always"
+        android:title="@string/start_game_icon_title" />
+</menu>
